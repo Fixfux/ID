@@ -10,54 +10,7 @@ from akad.ttypes import Message
 from multiprocessing import Pool, Process
 from time import sleep
 import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib3, wikipedia, html5lib
-from datetime import timedelta, date
-from liff.ttypes import LiffChatContext, LiffContext, LiffSquareChatContext, LiffNoneContext, LiffViewRequest
-from datetime import datetime
-from bs4 import BeautifulSoup
-from googletrans import Translator
-from gtts_token.gtts_token import Token
-_session = requests.session()
-from gtts import gTTS
-import youtube_dl
-from ffmpy import FFmpeg
-import traceback
-
-client = LINE("EC6etbJg6HfRJ7laESP2.SkWyjRrYGLVWEotcN8+PWG.yhjtuic3wY6h8hZDlQEhYDzpMTpvF4kRWWhg1xB+fQc=")
-#client = LINE("ECGRuU6jVRzrOc9mt0y0.Ql1GwYBgPq4bD8CfwL22qa.NbGPw570d/AIfiAAG4OFSkeWIENtxSQg3IXqg4JNdYs=")
- #TEMP_ID = "1623679774"
-#channel = Channel(client, TEMP_ID)
-#client.log(str(channel.getChannelResult()))
-client.log("Timeline Token : " + str(client.tl.channelAccessToken))
-clientMid = client.profile.mid
-clientProfile = client.getProfile()
-clientSettings = client.getSettings()
-clientPoll = OEPoll(client)
-botStart = time.time()
-admin = ["ub0ac1826b472825bf078e4c29fcfe9c2"]
-msg_dict = {}
-msg_dict1 = {}
-
-
-settings = {
-    "autoAdd": True,
-    "autoJoin": False,
-    "autolike": True,
-    "comment": "auto comment by:\n   ⚛️ ID BOTS ⚛️ \n\n⚛️ Open order bot protect ⚛️\n⚛️.Protect room smule\n⚛️.Protect room event\n⚛️.Protect room chat\n⚛️.Protect room olshop\n Dilengkapi dengan anti JS\nSedia juga selfbot Only\n\nAnda minat\nsilahkan hubungi id line di bawah\nhttps://line.me/ti/p/~id_bots",
-    "autoBlock": True,
-    "autoLeave": True,
-    "autoRead": False,
-    "autoRespon": False,
-    "welcome": False,
-    "leave": False,
-    "Respontag":"ada apa tag aku\nkangen ya sama aku ",
-    "stickerOn": False,
-    "autoJoinTicket": False,
-    "checkContact": False,
-    "checkPost": False,
-    "checkSticker": False,
-    "changePictureProfile": False,
-    "changeGroupPicture": [],
-    "keyCommand": "",
+from 
     "AddstickerTag": {
         "sid": "",
         "spkg": "",
