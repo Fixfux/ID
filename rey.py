@@ -23,10 +23,10 @@ channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
 #kk = LineClient()
-kk = LineClient(authToken='ExkegvCI9iAhg2Bb97nc./PU0Cxthkp5tnb0K29DmVa.ZnXG91zGkXqsrRO46/rByXxB/bT1tqCE27jtTGsnJbM=')
-kk.log("Auth Token : " + str(kk.authToken))
-channel2 = LineChannel(kk)
-kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
+#kk = LineClient(authToken='ExkegvCI9iAhg2Bb97nc./PU0Cxthkp5tnb0K29DmVa.ZnXG91zGkXqsrRO46/rByXxB/bT1tqCE27jtTGsnJbM=')
+#kk.log("Auth Token : " + str(kk.authToken))
+#channel2 = LineChannel(kk)
+#kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
 #kc = LineClient()
 kc = LineClient(authToken='ExOdxLVMTstrd1TCoGce.1AqixFjrwZ6VnERXRMw2FG.SjWjj01FKMZzR1qRDa84MqeU2i+HuleCczR5bBOS9HY=')
@@ -42,10 +42,10 @@ sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 
 poll = LinePoll(cl)
 call = cl
-creator = ["u411e5942b009ef65f26471d44843d9e2"]
-owner = ["u411e5942b009ef65f26471d44843d9e2"]
-admin = ["u411e5942b009ef65f26471d44843d9e2","ua12c189883d5d8443edef1efbb4b172d"]
-staff = ["u411e5942b009ef65f26471d44843d9e2"]
+creator = ["u727933583f8830a3fc254fb1b906b174"]
+owner = ["u727933583f8830a3fc254fb1b906b174"]
+admin = ["u727933583f8830a3fc254fb1b906b174"]
+staff = ["u727933583f8830a3fc254fb1b906b174"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -133,8 +133,8 @@ wait = {
     "mention":"SINI KAK GABUNG CHAT AJA .. KALAU NGINTIP TERUS KU DO'AIN BISULAN 3 TAHUN LHO.. HEHEHE😊",
     "Respontag":"woyy.. tag mulu njir.. gua cipok beranak lu !! 😁😁😁😁😁",
     "welcome":"Selamat datang & semoga betah kakak peseg",
-    "comment":"Like like & like by REY SEBASTIAN",
-    "message":"Terimakasih sudah add saya \n kalau ada perlu bisa chat \n menerima jasa buat bot .. thanks 😃",
+    "comment":"Like like & like by ID BOTS",
+    "message":"Terimakasih sudah add saya ",
     }
 
 read = {
@@ -345,10 +345,10 @@ def help():
                   "╠➩●➢" + key + "Resetkey\n" + \
                   "╠➩●➢" + key + "ID line:「Id Line nya」\n" + \
                   "╠➩●➢" + key + "Sholat:「Nama Kota」\n" + \
-                  "╠➩●➢" + key + "reycuaca「Nama Kota」\n" + \
-                  "╠➩●➢" + key + "reylocation「Nama Kota」\n" + \
-                  "╠➩●➢" + key + "reymusic「Judul Lagu」\n" + \
-                  "╠➩●➢" + key + "reylyric「Judul Lagu」\n" + \
+                  "╠➩●➢" + key + "cuaca「Nama Kota」\n" + \
+                  "╠➩●➢" + key + "location「Nama Kota」\n" + \
+                  "╠➩●➢" + key + "music「Judul Lagu」\n" + \
+                  "╠➩●➢" + key + "lyric「Judul Lagu」\n" + \
                   "╠➩●➢" + key + "Ytmp3:「Judul Lagu」\n" + \
                   "╠➩●➢" + key + "image: \n" + \
                   "╠➩●➢" + key + "reyyoutube「Judul Video」\n" + \
@@ -392,8 +392,8 @@ def help():
                   "╠➩●➢" + key + "Listadmin\n" + \
                   "╠➩●➢" + key + "Listprotect\n" + \
                   "╠══════════════════════\n" +\
-                  "║●●●●" + key + "SQUAD NAGA MERAH ●●●●\n" +\
-                  "║" + key + " ●● http://line.me/ti/p/~rey_tlangu ●● \n" +\
+                  "║●●●●" + key + "ID BOTS \n" +\
+                  "║" + key + " http://line.me/ti/p/~idbots_ku1\n" +\
                   "╚══════════════════════"
     return helpMessage
 
@@ -437,8 +437,8 @@ def helpbot():
                   "╠➩●➢" + key + "Gift:「Mid korban」「Jumlah」\n" +\
                   "╠➩●➢" + key + "Spam:「Mid korban」「Jumlah」\n" + \
                   "╠══════════════════════════\n" +\
-                  "║●●●●" + key + "SQUAD NAGA MERAH ●●●●\n" +\
-                  "║" + key + " ●● http://line.me/ti/p/~rey_tlangu ●● \n" +\
+                  "║●●●●" + key + "ID BOTS\n" +\
+                  "║" + key + " ●● http://line.me/ti/p/~idbots_ku1 ●● \n" +\
                   "╚══════════════════════════"
     return helpMessage1
 
@@ -1342,7 +1342,7 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "「 NAGA MERAH PŘØŤĘČŤÎØŇ」\n"
+                                md = "「ID BOTS」\n"
                                 if wait["sticker"] == True: md+="「 Sticker「ON」」\n"
                                 else: md+="「 Sticker「OFF」」\n"
                                 if wait["contact"] == True: md+="「 Contact「ON」」\n"
@@ -1377,7 +1377,7 @@ def bot(op):
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"Naga Merah Creator") 
+                                cl.sendText(msg.to,"ID BOTS") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
@@ -1395,8 +1395,8 @@ def bot(op):
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
                                cl.sendMessage1(msg)
-                               cl.sendMessage(msg.to,"「 SQUAD NAGA MERAH」")
-                               cl.sendMessage(msg.to,"「 SAVE YOUR GROUP」")
+                               cl.sendMessage(msg.to,"「ID BOTS」")
+                               #cl.sendMessage(msg.to,"「 SAVE YOUR GROUP」")
 
                         elif text.lower() == "mid":
                                cl.sendMessage(msg.to, msg._from)
@@ -1555,7 +1555,7 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                ret_ += "●➢「 SQUAD NAGA MERAH」 Grup Info\n"
+                                ret_ += "●➢「ID BOTS」 Grup Info\n"
                                 ret_ += "\n●➢Nama Group : {}".format(G.name)
                                 ret_ += "\n●➢ID Group : {}".format(G.id)
                                 ret_ += "\n●➢Pembuat : {}".format(gCreator)
@@ -1913,7 +1913,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to,"●➢「 SQUAD NAGA MERAH」\n\n"+ma+"\nTotal「%s」 Bots" %(str(len(Bots))))
+                                cl.sendMessage(msg.to,"●➢「ID BOTS」\n\n"+ma+"\nTotal「%s」 Bots" %(str(len(Bots))))
 
                         elif cmd == "listadmin":
                           if wait["selfbot"] == True:
@@ -1936,7 +1936,7 @@ def bot(op):
                                     c = c + 1
                                     end = '\n'
                                     mc += str(c) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to,"●➢「ADMIN NAGA MERAH 」\n\nSuper admin:\n"+ma+"\nAdmin:\n"+mb+"\nStaff:\n"+mc+"\nTotal「%s」「SQUAD NAGA MERAH 」 " %(str(len(owner)+len(admin)+len(staff))))
+                                cl.sendMessage(msg.to,"●➢「ID BOTS」\n\nSuper admin:\n"+ma+"\nAdmin:\n"+mb+"\nStaff:\n"+mc+"\nTotal「%s」「SQUAD NAGA MERAH 」 " %(str(len(owner)+len(admin)+len(staff))))
 
                         elif cmd == "listprotect":
                           if wait["selfbot"] == True:
@@ -1969,7 +1969,7 @@ def bot(op):
                                     c = c + 1
                                     end = '\n'
                                     mc += str(c) + ". " +cl.getGroup(group).name + "\n"
-                                cl.sendMessage(msg.to,"●➢「 Protect Naga Merah」\n\nPROTECT URL :\n"+ma+"\n●➢PROTECT KICK :\n"+mb+"\n●➢PROTECT JOIN :\n"+md+"\n●➢PROTECT CANCEL:\n"+mc+"\nTotal「%s」●➢Grup yg dijaga" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel))))
+                                cl.sendMessage(msg.to,"●➢ID BOTS\n\nPROTECT URL :\n"+ma+"\n●➢PROTECT KICK :\n"+mb+"\n●➢PROTECT JOIN :\n"+md+"\n●➢PROTECT CANCEL:\n"+mc+"\nTotal「%s」●➢Grup yg dijaga" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel))))
 
                         elif cmd == "respon":
                           if wait["selfbot"] == True:
@@ -2015,10 +2015,10 @@ def bot(op):
                                 G = kc.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
                                 kc.updateGroup(G)
-                                ki.sendMessage(msg.to,"「 NAGA MERAH 1 DONE」")
-                                kk.sendMessage(msg.to,"「NAGA MERAH 2 DONE」")
-                                kc.sendMessage(msg.to," 「 NAGA MERAH 3 DONE」")
-                                sw.sendMessage(msg.to,"「 NAGA COMPLETE .. GHOST ANTIJS STAY」")
+                                #ki.sendMessage(msg.to,"「 NAGA MERAH 1 DONE」")
+                                #kk.sendMessage(msg.to,"「NAGA MERAH 2 DONE」")
+                                #kc.sendMessage(msg.to," 「 NAGA MERAH 3 DONE」")
+                                #sw.sendMessage(msg.to,"「 NAGA COMPLETE .. GHOST ANTIJS STAY」")
 
                         elif cmd == "out":
                           if wait["selfbot"] == True:
@@ -2248,7 +2248,7 @@ def bot(op):
                                          ret_ += "\nJam : " + datetime.strftime(timeNow,'%H:%M:%S')
                                   cl.sendMessage(msg.to, str(ret_))
 
-                        elif cmd.startswith("reycuaca "):
+                        elif cmd.startswith("cuaca "):
                                 try:
                                     sep = text.split(" ")
                                     location = text.replace(sep[0] + " ","")
@@ -2272,7 +2272,7 @@ def bot(op):
                                 except Exception as error:
                                     logError(error)
 
-                        elif cmd.startswith("reylocation "):
+                        elif cmd.startswith("location "):
                                 try:
                                     sep = text.split(" ")
                                     location = text.replace(sep[0] + " ","")
@@ -2289,7 +2289,7 @@ def bot(op):
                                 except Exception as error:
                                     logError(error)
 
-                        elif cmd.startswith("reylyric "):
+                        elif cmd.startswith("lyric "):
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
                                 cond = query.split("|")
@@ -2322,7 +2322,7 @@ def bot(op):
                                             lyric = lyric.replace(char,'')
                                         cl.sendMessage(msg.to, str(lyric))
                             
-                        elif cmd.startswith("reymusic "):
+                        elif cmd.startswith("music "):
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
                                 cond = query.split("|")
@@ -2384,7 +2384,7 @@ def bot(op):
                                     cl.sendText(msg.to,"「Google Image」\nType : Search Image\nTime taken : %seconds" % (start))
                                     cl.sendImageWithURL(msg.to, str(path))
 
-                        elif cmd.startswith("reyyoutube "):
+                        elif cmd.startswith("youtube "):
                                 sep = text.split(" ")
                                 search = text.replace(sep[0] + " ","")
                                 params = {"search_query": search}
@@ -2719,9 +2719,9 @@ def bot(op):
                                          msgs = "Ghost Sudah Tidak Aktif"
                                     cl.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                    
 
-                        elif 'Reypro ' in msg.text:
+                        elif 'pro ' in msg.text:
                            if msg._from in admin:
-                              spl = msg.text.replace('Reypro ','')
+                              spl = msg.text.replace('pro ','')
                               if spl == 'on':
                                   if msg.to in protectqr:
                                        msgs = ""
@@ -3168,7 +3168,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to,"❧ĐPĶ Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(wait["blacklist"]))))
+                                cl.sendMessage(msg.to,"IDblacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(wait["blacklist"]))))
 
                         elif cmd == "talkbanlist" or text.lower() == 'talkbanlist':
                           if wait["selfbot"] == True:
@@ -3182,7 +3182,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to,"❧ĐPĶ Talkban User\n\n"+ma+"\nTotal「%s」Talkban User" %(str(len(wait["Talkblacklist"]))))
+                                cl.sendMessage(msg.to," Talkban User\n\n"+ma+"\nTotal「%s」Talkban User" %(str(len(wait["Talkblacklist"]))))
 
                         elif cmd == "blc" or text.lower() == 'blc':
                           if wait["selfbot"] == True:
@@ -3268,17 +3268,17 @@ def bot(op):
                             if msg._from in admin:
                                cl.sendMessage(msg.to, "「Sider Msg」\n●➢Sider Msg mu :\n\n「 " + str(wait["mention"]) + " 」")
                                
-                        elif cmd == "naga team" or msg.text.lower == "naga team":
-                            if msg._from in admin:
-                               cl.sendMessage(to," 「ADMIN NAGA MERAH HADIR」")
-                               ki.sendMessage(to," 「BOTS NAGA MERAH 1」")
-                               kk.sendMessage(to," 「BOTS  NAGA MERAH 2」")
-                               kc.sendMessage(to,"「 BOTS  NAGA MERAH 3 」")
-                               sw.sendMessage(to," 「MY GHOST STAY .. SAVE YOUR GROUP」 ")
+                        #elif cmd == "naga team" or msg.text.lower == "naga team":
+                         #   if msg._from in admin:
+                          #     cl.sendMessage(t」")
+                           #    ki.sendMessage(to," 「BOTS NAGA MERAH 1」")
+                            #   kk.sendMessage(to," 「BOTS  NAGA MERAH 2」")
+                             #  kc.sendMessage(to,"「 BOTS  NAGA MERAH 3 」")
+                               #sw.sendMessage(to," 「MY GHOST STAY .. SAVE YOUR GROUP」 ")
                                
                         elif cmd == "my team" or msg.text.lower == "my team":
                       	  if msg._from in admin:
-                       	    cl.sendMessage(to,"╔═════════════ \n ╠➢ Open Order Bot .. /n ╠➢ 1 admin + 2 asist /n ╠➢ 1 admin + 4 asist + 1 ghost /n ╠═══════════ /n ║ ●● jika minat silahkan contact kami ●● /n ╠➢ https://line.me/ti/p/~rey_tlangu /n ╚══════════════")
+                       	    cl.sendMessage(to,"╔═════════════ \n ╠➢ Open Order Bot .. /n ╠➢ 1 admin + 2 asist /n ╠➢ 1 admin + 4 asist + 1 ghost /n ╠═══════════ /n ║ ●● jika minat silahkan contact kami ●● /n ╠➢ https://line.me/ti/p/~idbots_ku1 /n ╚══════════════")
 
 #===========JOIN TICKET============#
                         elif "/ti/g/" in msg.text.lower():
