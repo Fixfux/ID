@@ -336,96 +336,69 @@ def help():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage = "╔═════════════════\n" +\
-                  "║●●●●●●●●●●●●●●●●●\n" + \
-                  "║●➢" + key + "Menu Help\n" + \
+                  "║BY: ID BOTS\n" + \
+                  "║" + key + "Menu Help\n" + \
                   "╠══════════════════\n" +\
-                  "╠➩●➢" + key + "joinbot\n" + \
-                  "╠➩●➢"+ key + "joinallbot\n" + \
-                  "╠➩●➢" + key + "byebot\n" + \
-                  "╠➩●➢" + key + "jcbye\n" + \
-                  "╠➩●➢" + key + "jsbye\n" + \
-                  "╠➩●➢" + key + "jsinvite\n" + \
-                  "╠➩●➢" + key + "invitebot\n" + \
-                  "╠➩●➢" + key + "jscancel\n" + \
-                  "╠➩●➢" + key + "Restart\n" + \
-                  "╠➩●➢" + key + "Runtime\n" + \
-                  "╠➩●➢" + key + "Creator\n" + \
-                  "╠➩●➢" + key + "Speed\n" + \
-                  "╠➩●➢" + key + "my team\n" + \
-                  "╠➩●➢" + key + "Sprespon\n" + \
-                  "╠➩●➢" + key + "Tag\n" + \
-                  "╠➩●➢" + key + "in\n" + \
-                  "╠➩●➢" + key + "out\n" + \
-                  "╠➩●➢" + key + "Byeme\n" + \
-                  "╠➩●➢" + key + "Leave「Namagrup」\n" + \
-                  "╠➩●➢" + key + "Ginfo\n" + \
-                  "╠➩●➢" + key + "Open\n" + \
-                  "╠➩●➢" + key + "Close\n" + \
-                  "╠➩●➢" + key + "Url grup\n" + \
-                  "╠➩●➢" + key + "Gruplist\n" + \
-                  "╠➩●➢" + key + "Infogrup「angka」\n" + \
-                  "╠➩●➢" + key + "Infomem「angka」\n" + \
-                  "╠➩●➢" + key + "Remove chat\n" + \
-                  "╠➩●➢" + key + "Lurking「on/off」\n" + \
-                  "╠➩●➢" + key + "Lurkers\n" + \
-                  "╠➩●➢" + key + "Sider「on/off」\n" + \
-                  "╠➩●➢" + key + "Updatefoto\n" + \
-                  "╠➩●➢" + key + "Updategrup\n" + \
-                  "╠➩●➢" + key + "Updatebot\n" + \
-                  "╠➩●➢" + key + "Broadcast:「Text」\n" + \
-                  "╠➩●➢" + key + "Setkey「New Key」\n" + \
-                  "╠➩●➢" + key + "Mykey\n" + \
-                  "╠➩●➢" + key + "Resetkey\n" + \
-                  "╠➩●➢" + key + "ID line:「Id Line nya」\n" + \
-                  "╠➩●➢" + key + "Sholat:「Nama Kota」\n" + \
-                  "╠➩●➢" + key + "cuaca「Nama Kota」\n" + \
-                  "╠➩●➢" + key + "location「Nama Kota」\n" + \
-                  "╠➩●➢" + key + "music「Judul Lagu」\n" + \
-                  "╠➩●➢" + key + "lyric「Judul Lagu」\n" + \
-                  "╠➩●➢" + key + "Ytmp3:「Judul Lagu」\n" + \
-                  "╠➩●➢" + key + "image: \n" + \
-                  "╠➩●➢" + key + "reyyoutube「Judul Video」\n" + \
-                  "╠➩●➢" + key + "Profileig:「Nama IG」\n" + \
-                  "╠➩●➢" + key + "Cekdate:「tgl-bln-thn」\n" + \
-                  "╠➩●➢" + key + "Jumlah:「angka」\n" + \
-                  "╠➩●➢" + key + "Spamtag「@」\n" + \
-                  "╠➩●➢" + key + "Spamcall:「jumlahnya」\n" + \
-                  "╠➩●➢" + key + "Spamcall\n" + \
-                  "╠➩●➢" + key + "Notag「on/off」\n" + \
-                  "╠➩●➢" + key + "Reypro「on/off」\n" + \
-                  "╠➩●➢" + key + "Protecturl「on/off」\n" + \
-                  "╠➩●➢" + key + "Protectjoin「on/off」\n" + \
-                  "╠➩●➢" + key + "Protectkick「on/off」\n" + \
-                  "╠➩●➢" + key + "Protectcancel「on/off」\n" + \
-                  "╠➩●➢" + key + "Antijs「on/off」\n" + \
-                  "╠➩●➢" + key + "Antijs stay\n" + \
-                  "╠➩●➢" + key + "Ghost「on/off」\n" + \
-                  "╠➩●➢" + key + "Sticker「on/off」\n" + \
-                  "╠➩●➢" + key + "Respon「on/off」\n" + \
-                  "╠➩●➢" + key + "Contact「on/off」\n" + \
-                  "╠➩●➢" + key + "Autojoin「on/off」\n" + \
-                  "╠➩●➢" + key + "Autoadd「on/off」\n" + \
-                  "╠➩●➢" + key + "Welcome「on/off」\n" + \
-                  "╠➩●➢" + key + "Autoleave「on/off」\n" + \
-                  "╠➩●➢" + key + "Admin:on\n" + \
-                  "╠➩●➢" + key + "Admin:repeat\n" + \
-                  "╠➩●➢" + key + "Staff:on\n" + \
-                  "╠➩●➢" + key + "Staff:repeat\n" + \
-                  "╠➩●➢" + key + "Bot:on\n" + \
-                  "╠➩●➢" + key + "Bot:repeat\n" + \
-                  "╠➩●➢" + key + "Adminadd「@」\n" + \
-                  "╠➩●➢" + key + "Admindell「@」\n" + \
-                  "╠➩●➢" + key + "Staffadd「@」\n" + \
-                  "╠➩●➢" + key + "Staffdell「@」\n" + \
-                  "╠➩●➢" + key + "Botadd「@」\n" + \
-                  "╠➩●➢" + key + "Botdell「@」\n" + \
-                  "╠➩●➢" + key + "Refresh\n" + \
-                  "╠➩●➢" + key + "Listbot\n" + \
-                  "╠➩●➢" + key + "naga team\n" + \
-                  "╠➩●➢" + key + "Listadmin\n" + \
-                  "╠➩●➢" + key + "Listprotect\n" + \
+                  "╠" + key + "joinbot\n" + \
+                  "╠"+ key + "joinallbot\n" + \
+                  "╠" + key + "byebot\n" + \
+                  "╠" + key + "jcbye\n" + \
+                  "╠" + key + "jsbye\n" + \
+                  "╠" + key + "jsinvite\n" + \
+                  "╠" + key + "invitebot\n" + \
+                  "╠" + key + "jscancel\n" + \
+                  "╠" + key + "Restart\n" + \
+                  "╠" + key + "Runtime\n" + \
+                  "╠" + key + "Creator\n" + \
+                  "╠" + key + "Speed\n" + \
+                  "╠" + key + "my team\n" + \
+                  "╠" + key + "Sprespon\n" + \
+                  "╠" + key + "Tag\n" + \
+                  "╠" + key + "Byeme\n" + \
+                  "╠" + key + "Leave「Namagrup」\n" + \
+                  "╠" + key + "Ginfo\n" + \
+                  "╠" + key + "Open\n" + \
+                  "╠" + key + "Close\n" + \
+                  "╠" + key + "Url grup\n" + \
+                  "╠" + key + "Gruplist\n" + \
+                  "╠" + key + "Infogrup「angka」\n" + \
+                  "╠" + key + "Infomem「angka」\n" + \
+                  "╠" + key + "Remove chat\n" + \
+                  "╠" + key + "Lurking「on/off」\n" + \
+                  "╠" + key + "Lurkers\n" + \
+                  "╠" + key + "Sider「on/off」\n" + \
+                  "╠" + key + "Updatefoto\n" + \
+                  "╠" + key + "Updategrup\n" + \
+                  "╠" + key + "Updatebot\n" + \
+                  "╠" + key + "Protecturl「on/off」\n" + \
+                  "╠" + key + "Protectjoin「on/off」\n" + \
+                  "╠" + key + "Protectkick「on/off」\n" + \
+                  "╠" + key + "Protectcancel「on/off」\n" + \
+                  "╠" + key + "Antijs「on/off」\n" + \
+                  "╠" + key + "Respon「on/off」\n" + \
+                  "╠" + key + "Contact「on/off」\n" + \
+                  "╠" + key + "Autojoin「on/off」\n" + \
+                  "╠" + key + "Autoadd「on/off」\n" + \
+                  "╠" + key + "Welcome「on/off」\n" + \
+                  "╠" + key + "Autoleave「on/off」\n" + \
+                  "╠" + key + "Admin:on\n" + \
+                  "╠" + key + "Admin:repeat\n" + \
+                  "╠" + key + "Staff:on\n" + \
+                  "╠" + key + "Staff:repeat\n" + \
+                  "╠" + key + "Bot:on\n" + \
+                  "╠" + key + "Bot:repeat\n" + \
+                  "╠" + key + "Adminadd「@」\n" + \
+                  "╠" + key + "Admindell「@」\n" + \
+                  "╠" + key + "Staffadd「@」\n" + \
+                  "╠" + key + "Staffdell「@」\n" + \
+                  "╠" + key + "Botadd「@」\n" + \
+                  "╠" + key + "Botdell「@」\n" + \
+                  "╠" + key + "Refresh\n" + \
+                  "╠" + key + "Listbot\n" + \
+                  "╠" + key + "Listadmin\n" + \
+                  "╠" + key + "Listprotect\n" + \
                   "╠══════════════════════\n" +\
-                  "║●●●●" + key + "ID BOTS \n" +\
+                  "║" + key + "ID BOTS \n" +\
                   "║" + key + " http://line.me/ti/p/~idbots_ku1\n" +\
                   "╚══════════════════════"
     return helpMessage
@@ -434,38 +407,38 @@ def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage1 = "╔═════════════════\n" +\
-                  "║ ●●●●●●●●●●●●●●●●●\n" + \
+                  "║ BY ID BOTS\n" + \
                   "║" + "HELP BOT\n" + \
                   "╠═════════════════\n" +\
-                  "╠➩●➢" + key + "Blc\n" + \
-                  "╠➩●➢" + key + "Ban:on\n" + \
-                  "╠➩●➢" + key + "Unban:on\n" + \
-                  "╠➩●➢" + key + "Ban「@」\n" + \
-                  "╠➩●➢" + key + "Unban「@」\n" + \
-                  "╠➩●➢" + key + "Talkban「@」\n" + \
-                  "╠➩●➢" + key + "Untalkban「@」\n" + \
-                  "╠➩●➢" + key + "Talkban:on\n" + \
-                  "╠➩●➢" + key + "Untalkban:on\n" + \
-                  "╠➩●➢" + key + "Banlist\n" + \
-                  "╠➩●➢" + key + "Talkbanlist\n" + \
-                  "╠➩●➢" + key + "Clearban\n" + \
-                  "╠➩●➢" + key + "Refresh\n" + \
-                  "╠➩●➢" + key + "Cek sider\n" + \
-                  "╠➩●➢" + key + "Cek spam\n" + \
-                  "╠➩●➢" + key + "Cek pesan \n" + \
-                  "╠➩●➢" + key + "Cek respon \n" + \
-                  "╠➩●➢" + key + "Cek welcome\n" + \
-                  "╠➩●➢" + key + "Set sider:「Text」\n" + \
-                  "╠➩●➢" + key + "Set spam:「Text」\n" + \
-                  "╠➩●➢" + key + "Set pesan:「Text」\n" + \
-                  "╠➩●➢" + key + "Set respon:「Text」\n" + \
-                  "╠➩●➢" + key + "Set welcome:「Text」\n" + \
-                  "╠➩●➢" + key + "Myname:「Nama」\n" + \
-                  "╠➩●➢" + key + "name1-9:「Nama」\n" + \
-                  "╠➩●➢" + key + "foto1-9「Kirim fotonya」\n" + \
+                  "╠" + key + "Blc\n" + \
+                  "╠" + key + "Ban:on\n" + \
+                  "╠" + key + "Unban:on\n" + \
+                  "╠" + key + "Ban「@」\n" + \
+                  "╠" + key + "Unban「@」\n" + \
+                  "╠" + key + "Talkban「@」\n" + \
+                  "╠" + key + "Untalkban「@」\n" + \
+                  "╠" + key + "Talkban:on\n" + \
+                  "╠" + key + "Untalkban:on\n" + \
+                  "╠" + key + "Banlist\n" + \
+                  "╠" + key + "Talkbanlist\n" + \
+                  "╠" + key + "Clearban\n" + \
+                  "╠" + key + "Refresh\n" + \
+                  "╠" + key + "Cek sider\n" + \
+                  "╠" + key + "Cek spam\n" + \
+                  "╠" + key + "Cek pesan \n" + \
+                  "╠" + key + "Cek respon \n" + \
+                  "╠" + key + "Cek welcome\n" + \
+                  "╠" + key + "Set sider:「Text」\n" + \
+                  "╠" + key + "Set spam:「Text」\n" + \
+                  "╠" + key + "Set pesan:「Text」\n" + \
+                  "╠" + key + "Set respon:「Text」\n" + \
+                  "╠" + key + "Set welcome:「Text」\n" + \
+                  "╠" + key + "Myname:「Nama」\n" + \
+                  "╠" + key + "name1-9:「Nama」\n" + \
+                  "╠" + key + "foto1-9「Kirim fotonya」\n" + \
                   "╠══════════════════════════\n" +\
-                  "║●●●●" + key + "ID BOTS\n" +\
-                  "║" + key + " ●● http://line.me/ti/p/~idbots_ku1 ●● \n" +\
+                  "║" + key + "ID BOTS\n" +\
+                  "║" + key + "  http://line.me/ti/p/~idbots_ku1  \n" +\
                   "╚══════════════════════════"
     return helpMessage1
 
@@ -553,22 +526,22 @@ def bot(op):
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         cl.acceptGroupInvitation(op.param1)
                         ginfo = cl.getGroup(op.param1)
-                        cl.sendMessage(op.param1,"Haii " +str(ginfo.name))
+                        #cl.sendMessage(op.param1,"Haii " +str(ginfo.name))
                     else:
                         cl.acceptGroupInvitation(op.param1)
                         ginfo = cl.getGroup(op.param1)
-                        cl.sendMessage(op.param1,"Haii " + str(ginfo.name))
+                       # cl.sendMessage(op.param1,"Haii " + str(ginfo.name))
             if Amid in op.param3:
                 if wait["autoJoin"] == True:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         ki.acceptGroupInvitation(op.param1)
                         ginfo = ki.getGroup(op.param1)
-                        ki.sendMessage(op.param1,"Selamat Tinggal\n Group " +str(ginfo.name))
+                       # ki.sendMessage(op.param1,"Selamat Tinggal\n Group " +str(ginfo.name))
                         ki.leaveGroup(op.param1)
                     else:
                         ki.acceptGroupInvitation(op.param1)
                         ginfo = ki.getGroup(op.param1)
-                        ki.sendMessage(op.param1,"Hai " + str(ginfo.name))
+                       # ki.sendMessage(op.param1,"Hai " + str(ginfo.name))
             if Bmid in op.param3:
                 if wait["autoJoin"] == True:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
@@ -579,18 +552,18 @@ def bot(op):
                     else:
                         kk.acceptGroupInvitation(op.param1)
                         ginfo = kk.getGroup(op.param1)
-                        kk.sendMessage(op.param1,"Hai " + str(ginfo.name))
+                       # kk.sendMessage(op.param1,"Hai " + str(ginfo.name))
             if Cmid in op.param3:
                 if wait["autoJoin"] == True:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         kc.acceptGroupInvitation(op.param1)
                         ginfo = kc.getGroup(op.param1)
-                        kc.sendMessage(op.param1,"Selamat Tinggal\n Group " +str(ginfo.name))
+                       # kc.sendMessage(op.param1,"Selamat Tinggal\n Group " +str(ginfo.name))
                         kc.leaveGroup(op.param1)
                     else:
                         kc.acceptGroupInvitation(op.param1)
                         ginfo = kc.getGroup(op.param1)
-                        kc.sendMessage(op.param1,"Hai " + str(ginfo.name))
+                       # kc.sendMessage(op.param1,"Hai " + str(ginfo.name))
 
 
         if op.type == 17:
