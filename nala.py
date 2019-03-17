@@ -50,20 +50,20 @@ js3.log("Auth Token : " + str(js3.authToken))
 channel11 = LineChannel(js3)
 js3.log("Channel Access Token : " + str(channel16.channelAccessToken))
 
-jc = LineClient(authToken='')
-jc.log("Auth Token : " + str(jc.authToken))
-channel11 = LineChannel(jc)
-jc.log("Channel Access Token : " + str(channel17.channelAccessToken))
-
 jc1 = LineClient(authToken='')
 jc1.log("Auth Token : " + str(jc1.authToken))
 channel11 = LineChannel(jc1)
-jc1.log("Channel Access Token : " + str(channel18.channelAccessToken))
+jc1.log("Channel Access Token : " + str(channel17.channelAccessToken))
 
 jc2 = LineClient(authToken='')
 jc2.log("Auth Token : " + str(jc2.authToken))
 channel11 = LineChannel(jc2)
-jc2.log("Channel Access Token : " + str(channel19.channelAccessToken))
+jc2.log("Channel Access Token : " + str(channel18.channelAccessToken))
+
+jc3 = LineClient(authToken='')
+jc3.log("Auth Token : " + str(jc3.authToken))
+channel11 = LineChannel(jc3)
+jc3.log("Channel Access Token : " + str(channel19.channelAccessToken))
 
 
 poll = LinePoll(cl)
@@ -79,9 +79,9 @@ Cmid = kc.getProfile().mid
 Dmid = js1.getProfile().mid
 Emid = js2.getProfile().mid
 Fmid = js3.getProfile().mid
-Gmid = jc.getProfile().mid
-Hmid = jc1.getProfile().mid
-Imid = jc2.getProfile().mid
+Gmid = jc1.getProfile().mid
+Hmid = jc2.getProfile().mid
+Imid = jc3.getProfile().mid
 KAC = [cl,ki,kk,kc]
 ABC = [ki,kk,kc]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
@@ -706,38 +706,83 @@ def bot(op):
                 if op.param1 in protectantijs:
                   if op.param3 in mid:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        sw.acceptGroupInvitation(op.param1)
-                        G = sw.getGroup(op.param1)
+                        js1.acceptGroupInvitation(op.param1)
+                        G = js1.getGroup(op.param1)
                         G.preventedJoinByTicket = False
-                        sw.updateGroup(G)
-                        Ticket = sw.reissueGroupTicket(op.param1)
+                        js1.updateGroup(G)
+                        Ticket = js1.reissueGroupTicket(op.param1)
                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         kk.acceptGroupInvitationByTicket(op.param1,Ticket)
                         kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        sw.kickoutFromGroup(op.param1,[op.param2])
+                        js1.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = True
-                        sw.updateGroup(G)
+                        js1.updateGroup(G)
                         wait["blacklist"][op.param2] = True
                         random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                         sw.leaveGroup(op.param1)
-                        cl.inviteIntoGroup(op.param1,[Zmid])
+                        cl.inviteIntoGroup(op.param1,[Dmid])
                         cl.inviteIntoGroup(op.param1,[admin])
-                    else:
+                    except:
+                        try:
+                            js2.acceptGroupInvitation(op.param1)
+                            G = js2.getGroup(op.param1)
+                            G.preventedJoinByTicket = False
+                            js2.updateGroup(G)
+                            Ticket = js2.reissueGroupTicket(op.param1)
+                            cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kk.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            js2.kickoutFromGroup(op.param1,[op.param2])
+                            G.preventedJoinByTicket = True
+                            js2.updateGroup(G)
+                            wait["blacklist"][op.param2] = True
+                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                            js2.leaveGroup(op.param1)
+                            ki.inviteIntoGroup(op.param1,[Emid])
+                            ki.inviteIntoGroup(op.param1,[admin])
+                        except:
+                            try:
+                                js3.acceptGroupInvitation(op.param1)
+                                G = js3.getGroup(op.param1)
+                                G.preventedJoinByTicket = False
+                                js3.updateGroup(G)
+                                Ticket = js3.reissueGroupTicket(op.param1)
+                                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                js3.kickoutFromGroup(op.param1,[op.param2])
+                                G.preventedJoinByTicket = True
+                                js3.updateGroup(G)
+                                wait["blacklist"][op.param2] = True
+                                random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                                js3.leaveGroup(op.param1)
+                                cl.inviteIntoGroup(op.param1,[Fmid])
+                                cl.inviteIntoGroup(op.param1,[admin])
+                    except:
                         pass
                         
-                if op.param3 in Zmid:
+                if op.param3 in Dmid:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        cl.findAndAddContactsByMid(op.param3)
-                        cl.inviteIntoGroup(op.param1,[Zmid])
-                        cl.sendMessage(op.param1,"=AntiJS Invited=")
-                    else:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        cl.findAndAddContactsByMid(op.param3)
-                        cl.inviteIntoGroup(op.param1,[Zmid])
-                        cl.sendMessage(op.param1,"=AntiJS Invited=")
-                        
+                        ki.kickoutFromGroup(op.param1,[op.param2])
+                        ki.findAndAddContactsByMid(op.param3)
+                        ki.inviteIntoGroup(op.param1,[Dmid])
+                    except:
+                        try:
+                            kk.kickoutFromGroup(op.param1,[op.param2])
+                            kk.findAndAddContactsByMid(op.param3)
+                            kk.inviteIntoGroup(op.param1,[Dmid])
+                        except:
+                            try:
+                                kc.kickoutFromGroup(op.param1,[op.param2])
+                                kc.findAndAddContactsByMid(op.param3)
+                                kc.inviteIntoGroup(op.param1,[Dmid])
+                            except:
+                                pass
+               
+                    return
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                     if op.param3 in admin:
                         if op.param1 in protectantijs:
@@ -750,7 +795,7 @@ def bot(op):
                 pass
                 
         if op.type == 32:
-            if op.param3 in Zmid:
+            if op.param3 in Dmid:
                 if op.param2 in Bots:
                     pass
                 if op.param2 in owner:
@@ -762,11 +807,54 @@ def bot(op):
                 else:
                      wait["blacklist"][op.param2] = True
                      try:
-                         random.choice(ABC).inviteIntoGroup(op.param1,[op.param3])
-                         random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                         cl.sendMessage(op.param1, "itu ProtectJs Bosskuh Jgn di Cancel")
-                     except:
-                         pass
+                         G = cl.getGroup(op.param1)
+                         G.preventedJoinByTicket = False
+                         cl.updateGroup(G)
+                         Ticket = cl.reissueGroupTicket(op.param1)
+                         jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                         jc1.kickoutFromGroup(op.param1,[op.param2])
+                         jc1.inviteIntoGroup(opp.param1,[Dmid])
+                         G.preventedJoinByTicket = True
+                         cl.updateGroup(G)
+                         jc1.leaveGroup(op.param1)
+                    except:
+                        try:
+                            G = ki.getGroup(op.param1)
+                            G.preventedJoinByTicket = False
+                            ki.updateGroup(G)
+                            Ticket = ki.reissueGroupTicket(op.param1)
+                            jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            jc1.kickoutFromGroup(op.param1,[op.param2])
+                            jc1.inviteIntoGroup(opp.param1,[Dmid])
+                            G.preventedJoinByTicket = True
+                            ki.updateGroup(G)
+                            jc1.leaveGroup(op.param1)
+                        except:
+                            try:
+                                G = kk.getGroup(op.param1)
+                                G.preventedJoinByTicket = False
+                                kk.updateGroup(G)
+                                Ticket = kk.reissueGroupTicket(op.param1)
+                                jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                jc1.kickoutFromGroup(op.param1,[op.param2])
+                                jc1.inviteIntoGroup(opp.param1,[Dmid])
+                                G.preventedJoinByTicket = True
+                                kk.updateGroup(G)
+                                jc1.leaveGroup(op.param1)
+                             except:
+                                 try:
+                                     G = cl.getGroup(op.param1)
+                                     G.preventedJoinByTicket = False
+                                     cl.updateGroup(G)
+                                     Ticket = cl.reissueGroupTicket(op.param1)
+                                     jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                     jc1.kickoutFromGroup(op.param1,[op.param2])
+                                     jc1.inviteIntoGroup(opp.param1,[Dmid])
+                                     G.preventedJoinByTicket = True
+                                     cl.updateGroup(G)
+                                     jc1.leaveGroup(op.param1)
+                                  except:
+                                      pass
             return
 #-------------------------------------------------------------------------------                
         if op.type == 32:
