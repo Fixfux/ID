@@ -855,6 +855,128 @@ def bot(op):
                                      jc1.leaveGroup(op.param1)
                                   except:
                                       pass
+                return
+            if op.param3 in Emid:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                     wait["blacklist"][op.param2] = True
+                     try:
+                         G = cl.getGroup(op.param1)
+                         G.preventedJoinByTicket = False
+                         cl.updateGroup(G)
+                         Ticket = cl.reissueGroupTicket(op.param1)
+                         jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                         jc1.kickoutFromGroup(op.param1,[op.param2])
+                         jc1.inviteIntoGroup(opp.param1,[Emid])
+                         G.preventedJoinByTicket = True
+                         cl.updateGroup(G)
+                         jc1.leaveGroup(op.param1)
+                    except:
+                        try:
+                            G = ki.getGroup(op.param1)
+                            G.preventedJoinByTicket = False
+                            ki.updateGroup(G)
+                            Ticket = ki.reissueGroupTicket(op.param1)
+                            jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            jc1.kickoutFromGroup(op.param1,[op.param2])
+                            jc1.inviteIntoGroup(opp.param1,[Emid])
+                            G.preventedJoinByTicket = True
+                            ki.updateGroup(G)
+                            jc1.leaveGroup(op.param1)
+                        except:
+                            try:
+                                G = kk.getGroup(op.param1)
+                                G.preventedJoinByTicket = False
+                                kk.updateGroup(G)
+                                Ticket = kk.reissueGroupTicket(op.param1)
+                                jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                jc1.kickoutFromGroup(op.param1,[op.param2])
+                                jc1.inviteIntoGroup(opp.param1,[Emid])
+                                G.preventedJoinByTicket = True
+                                kk.updateGroup(G)
+                                jc1.leaveGroup(op.param1)
+                             except:
+                                 try:
+                                     G = cl.getGroup(op.param1)
+                                     G.preventedJoinByTicket = False
+                                     cl.updateGroup(G)
+                                     Ticket = cl.reissueGroupTicket(op.param1)
+                                     jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                     jc1.kickoutFromGroup(op.param1,[op.param2])
+                                     jc1.inviteIntoGroup(opp.param1,[Emid])
+                                     G.preventedJoinByTicket = True
+                                     cl.updateGroup(G)
+                                     jc1.leaveGroup(op.param1)
+                                  except:
+                                      pass
+                return
+            if op.param3 in Fmid:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                     wait["blacklist"][op.param2] = True
+                     try:
+                         G = cl.getGroup(op.param1)
+                         G.preventedJoinByTicket = False
+                         cl.updateGroup(G)
+                         Ticket = cl.reissueGroupTicket(op.param1)
+                         jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                         jc1.kickoutFromGroup(op.param1,[op.param2])
+                         jc1.inviteIntoGroup(opp.param1,[Dmid])
+                         G.preventedJoinByTicket = True
+                         cl.updateGroup(G)
+                         jc1.leaveGroup(op.param1)
+                    except:
+                        try:
+                            G = ki.getGroup(op.param1)
+                            G.preventedJoinByTicket = False
+                            ki.updateGroup(G)
+                            Ticket = ki.reissueGroupTicket(op.param1)
+                            jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            jc1.kickoutFromGroup(op.param1,[op.param2])
+                            jc1.inviteIntoGroup(opp.param1,[Fmid])
+                            G.preventedJoinByTicket = True
+                            ki.updateGroup(G)
+                            jc1.leaveGroup(op.param1)
+                        except:
+                            try:
+                                G = kk.getGroup(op.param1)
+                                G.preventedJoinByTicket = False
+                                kk.updateGroup(G)
+                                Ticket = kk.reissueGroupTicket(op.param1)
+                                jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                jc1.kickoutFromGroup(op.param1,[op.param2])
+                                jc1.inviteIntoGroup(opp.param1,[Fmid])
+                                G.preventedJoinByTicket = True
+                                kk.updateGroup(G)
+                                jc1.leaveGroup(op.param1)
+                             except:
+                                 try:
+                                     G = cl.getGroup(op.param1)
+                                     G.preventedJoinByTicket = False
+                                     cl.updateGroup(G)
+                                     Ticket = cl.reissueGroupTicket(op.param1)
+                                     jc1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                     jc1.kickoutFromGroup(op.param1,[op.param2])
+                                     jc1.inviteIntoGroup(opp.param1,[Fmid])
+                                     G.preventedJoinByTicket = True
+                                     cl.updateGroup(G)
+                                     jc1.leaveGroup(op.param1)
+                                  except:
+                                      pass
             return
 #-------------------------------------------------------------------------------                
         if op.type == 32:
