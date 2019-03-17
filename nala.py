@@ -1433,11 +1433,36 @@ def bot(op):
                             del Setmain["ARfoto"][Cmid]
                             kc.updateProfilePicture(path)
                             kc.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Zmid in Setmain["ARfoto"]:
-                            path = sw.downloadObjectMsg(msg_id)
-                            del Setmain["ARfoto"][Zmid]
-                            sw.updateProfilePicture(path)
-                            sw.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Dmid in Setmain["ARfoto"]:
+                            path = js1.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Dmid]
+                            js1.updateProfilePicture(path)
+                            js1.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Emid in Setmain["ARfoto"]:
+                            path = js2.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Emid]
+                            js2.updateProfilePicture(path)
+                            js2.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Fmid in Setmain["ARfoto"]:
+                            path = js3.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Fmid]
+                            js3.updateProfilePicture(path)
+                            js3.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Gmid in Setmain["ARfoto"]:
+                            path = jc1.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Gmid]
+                            jc1.updateProfilePicture(path)
+                            jc1.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Hmid in Setmain["ARfoto"]:
+                            path = jc2.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Hmid]
+                            jc2.updateProfilePicture(path)
+                            jc2.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Imid in Setmain["ARfoto"]:
+                            path = jc1.downloadObjectMsg(msg_id)
+                            del Setmain["ARfoto"][Imid]
+                            jc3.updateProfilePicture(path)
+                            jc3.sendMessage(msg.to,"Foto berhasil dirubah")
 
                if msg.contentType == 1:
                  if msg._from in admin:
@@ -1852,34 +1877,59 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
-                                cl.sendText(msg.to,"●➢Kirim fotonya.....")
+                                cl.sendText(msg.to,"send image")
                                 
                         elif cmd == "updatefoto":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 Setmain["ARfoto"][mid] = True
-                                cl.sendText(msg.to,"●➢Kirim fotonya pas gua tidur ya kak.....")
+                                cl.sendText(msg.to,"send image")
                                 
-                        elif cmd == "bot1up":
+                        elif cmd == "foto1":
                             if msg._from in admin:
                                 Setmain["ARfoto"][Amid] = True
-                                ki.sendText(msg.to,"●➢Kirim fotonya besok jum'at kliwon ya.....")
+                                ki.sendText(msg.to,"send image")
                                 
-                        elif cmd == "bot2up":
+                        elif cmd == "foto2":
                             if msg._from in admin:
                                 Setmain["ARfoto"][Bmid] = True
-                                kk.sendText(msg.to,"●➢Kirim fotonya 2 bulan lagi.....")
+                                kk.sendText(msg.to,"send image")
                                 
-                        elif cmd == "bot3up":
+                        elif cmd == "foto3":
                             if msg._from in admin:
                                 Setmain["ARfoto"][Cmid] = True
-                                kc.sendText(msg.to,"●➢Kirim fotonya 6 bulan lagi.....")
+                                kc.sendText(msg.to, "send image")
                                 
-                        elif cmd == "bot4up":
+                        elif cmd == "foto4":
                             if msg._from in admin:
-                                Setmain["ARfoto"][Zmid] = True
-                                sw.sendText(msg.to,"●➢Kirim fotonya 5 tahun lagi.....")
+                                Setmain["ARfoto"][Dmid] = True
+                                js1.sendText(msg.to,"send image")
+                        elif cmd == "foto5":
+                            if msg._from in admin:
+                                Setmain["ARfoto"][Emid] = True
+                                js2.sendText(msg.to,"send image")
+                                
+                        elif cmd == "foto6":
+                            if msg._from in admin:
+                                Setmain["ARfoto"][Fmid] = True
+                                js3.sendText(msg.to,"send image")
+                                
+                        elif cmd == "foto7":
+                            if msg._from in admin:
+                                Setmain["ARfoto"][Gmid] = True
+                                jc1.sendText(msg.to,"send image")
+                         
 
+                        elif cmd == "foto8":
+                            if msg._from in admin:
+                                Setmain["ARfoto"][Hmid] = True
+                                jc2.sendText(msg.to,"send image")
+                                
+                        elif cmd == "foto9":
+                            if msg._from in admin:
+                                Setmain["ARfoto"][Imid] = True
+                                jc3.sendText(msg.to, "send image")
+                                
                         elif cmd.startswith("myname: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
@@ -1888,9 +1938,9 @@ def bot(op):
                                 profile = cl.getProfile()
                                 profile.displayName = string
                                 cl.updateProfile(profile)
-                                cl.sendMessage(msg.to,"●➢Nama diganti jadi " + string + "")
+                                cl.sendMessage(msg.to,"name changed " + string + "")
 
-                        elif cmd.startswith("bot1name: "):
+                        elif cmd.startswith("name1: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -1898,9 +1948,9 @@ def bot(op):
                                 profile = ki.getProfile()
                                 profile.displayName = string
                                 ki.updateProfile(profile)
-                                ki.sendMessage(msg.to,"●➢Nama diganti jadi " + string + "")
+                                ki.sendMessage(msg.to,"name changed " + string + "")
 
-                        elif cmd.startswith("bot2name: "):
+                        elif cmd.startswith("name2: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -1908,9 +1958,9 @@ def bot(op):
                                 profile = kk.getProfile()
                                 profile.displayName = string
                                 kk.updateProfile(profile)
-                                kk.sendMessage(msg.to,"●➢Nama diganti jadi " + string + "")
+                                kk.sendMessage(msg.to,"name changed " + string + "")
 
-                        elif cmd.startswith("bot3name: "):
+                        elif cmd.startswith("name3: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -1918,17 +1968,64 @@ def bot(op):
                                 profile = kc.getProfile()
                                 profile.displayName = string
                                 kc.updateProfile(profile)
-                                kc.sendMessage(msg.to,"●➢Nama diganti jadi " + string + "")
+                                kc.sendMessage(msg.to,"name changed " + string + "")
 
-                        elif cmd.startswith("botkicker: "):
+                        elif cmd.startswith("name4: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
                             if len(string) <= 10000000000:
-                                profile = sw.getProfile()
+                                profile = js1.getProfile()
                                 profile.displayName = string
-                                sw.updateProfile(profile)
-                                sw.sendMessage(msg.to,"●➢Nama diganti jadi " + string + "")
+                                js1.updateProfile(profile)
+                                js1.sendMessage(msg.to,"name changed " + string + "")
+                        elif cmd.startswith("name5: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            string = msg.text.replace(separate[0] + " ","")
+                            if len(string) <= 10000000000:
+                                profile = js2.getProfile()
+                                profile.displayName = string
+                                js2.updateProfile(profile)
+                                js2.sendMessage(msg.to,"name changed " + string + "")
+
+                        elif cmd.startswith("name6: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            string = msg.text.replace(separate[0] + " ","")
+                            if len(string) <= 10000000000:
+                                profile = js3.getProfile()
+                                profile.displayName = string
+                                js3.updateProfile(profile)
+                                js3.sendMessage(msg.to,"name changed " + string + "")
+                        elif cmd.startswith("name7: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            string = msg.text.replace(separate[0] + " ","")
+                            if len(string) <= 10000000000:
+                                profile = jc1.getProfile()
+                                profile.displayName = string
+                                jc1.updateProfile(profile)
+                                jc1.sendMessage(msg.to,"name changed " + string + "")
+
+                        elif cmd.startswith("name8: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            string = msg.text.replace(separate[0] + " ","")
+                            if len(string) <= 10000000000:
+                                profile = jc2.getProfile()
+                                profile.displayName = string
+                                jc2.updateProfile(profile)
+                                jc2.sendMessage(msg.to,"name changed " + string + "")
+                        elif cmd.startswith("name9: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            string = msg.text.replace(separate[0] + " ","")
+                            if len(string) <= 10000000000:
+                                profile = jc4.getProfile()
+                                profile.displayName = string
+                                jc3.updateProfile(profile)
+                                jc3.sendMessage(msg.to,"name changed " + string + "")
 
 #===========BOT UPDATE============#
                         elif cmd == "tag" or text.lower() == 'tag':
@@ -2138,17 +2235,18 @@ def bot(op):
                                 except:
                                     pass
                                 
-                        elif cmd == "antijs stay":
+                        elif cmd == "js on":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
                                     ginfo = cl.getGroup(msg.to)
-                                    cl.inviteIntoGroup(msg.to, [Zmid])
-                                    cl.sendMessage(msg.to,"●➢Grup 「"+str(ginfo.name)+"」 Aman Dari JS")
+                                    antijs = [Dmid,Emid,Fmid]
+                                    cl.inviteIntoGroup(msg.to, antijs)
+                                    #cl.sendMessage(msg.to,"●➢Grup 「"+str(ginfo.name)+"」 Aman Dari JS")
                                 except:
                                     pass
     
-                        elif cmd == "in":
+                        elif cmd == "joinbot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
@@ -2167,21 +2265,67 @@ def bot(op):
                                 #kk.sendMessage(msg.to,"「NAGA MERAH 2 DONE」")
                                 #kc.sendMessage(msg.to," 「 NAGA MERAH 3 DONE」")
                                 #sw.sendMessage(msg.to,"「 NAGA COMPLETE .. GHOST ANTIJS STAY」")
-
-                        elif cmd == "out":
+                        elif cmd == "joinallbot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
-                                ki.sendText(msg.to, "「SQUAD NAGA MERAH 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
+                                ginfo = cl.getGroup(msg.to)
+                                G.preventedJoinByTicket = False
+                                cl.updateGroup(G)
+                                invsend = 0
+                                Ticket = cl.reissueGroupTicket(msg.to)
+                                ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kk.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                js1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                js2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                js3.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                jc1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                jc2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                jc3.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = kc.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                kc.updateGroup(G)      
+
+                        elif cmd == "byebot":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                G = cl.getGroup(msg.to)
+                               # ki.sendText(msg.to, "「SQUAD NAGA MERAH 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
                                 ki.leaveGroup(msg.to)
                                 kk.leaveGroup(msg.to)
                                 kc.leaveGroup(msg.to)
-                                
+                        elif cmd == "jcbye":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                G = cl.getGroup(msg.to)
+                               # ki.sendText(msg.to, "「SQUAD NAGA MERAH 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
+                                jc1.leaveGroup(msg.to)
+                                jc1.leaveGroup(msg.to)
+                                jc1.leaveGroup(msg.to)
+                               
+                        elif cmd == "jsbye":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                G = cl.getGroup(msg.to)
+                               # ki.sendText(msg.to, "「SQUAD NAGA MERAH 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
+                                js1.leaveGroup(msg.to)
+                                js1.leaveGroup(msg.to)
+                                js1.leaveGroup(msg.to)
+                             
+                        elif cmd == "jscancel":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                G = cl.getGroup(msg.to)
+                               # ki.sendText(msg.to, "「SQUAD NAGA MERAH 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
+                                ki.cancelGroupInvitation(op.param1,[Dmid])
+                                kk.cancelGroupInvitation(op.param1,[Emid])
+                                kc.cancelGroupInvitation(op.param1,[Fmid])
                         elif cmd == "byeme":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
-                                cl.sendText(msg.to, "Bye bye fams "+str(G.name))
+                                #cl.sendText(msg.to, "Bye bye fams "+str(G.name))
                                 cl.leaveGroup(msg.to)
 
                         elif cmd.startswith("leave "):
