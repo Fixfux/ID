@@ -597,34 +597,6 @@ def bot(op):
                         ginfo = kc.getGroup(op.param1)
                         kc.sendMessage(op.param1,"Hai " + str(ginfo.name))
 
-        if op.type == 13:
-            if op.param1 in protectinvite:
-                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                    try:
-                        group = cl.getGroup(op.param1)
-                        gMembMids = [contact.mid for contact in group.invitee]
-                        for _mid in gMembMids:
-                            cl.cancelGroupInvitation(op.param1,[_mid])
-                    except:
-                        try:
-                            group = ki.getGroup(op.param1)
-                            gMembMids = [contact.mid for contact in group.invitee]
-                            for _mid in gMembMids:
-                                ki.cancelGroupInvitation(op.param1,[_mid])
-                        except:
-                            try:
-                                group = kk.getGroup(op.param1)
-                                gMembMids = [contact.mid for contact in group.invitee]
-                                for _mid in gMembMids:
-                                    kk.cancelGroupInvitation(op.param1,[_mid])
-                            except:
-                                try:
-                                    group = kc.getGroup(op.param1)
-                                    gMembMids = [contact.mid for contact in group.invitee]
-                                    for _mid in gMembMids:
-                                        kc.cancelGroupInvitation(op.param1,[_mid])
-                                except:
-                                    pass
 
         if op.type == 17:
             if op.param2 in wait["blacklist"]:
@@ -642,29 +614,6 @@ def bot(op):
                 welcomeMembers(op.param1, [op.param2])
                 cl.sendImageWithURL(op.param1, image)
 
-        if op.type == 17:
-            if op.param1 in protectjoin:
-                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                    wait["blacklist"][op.param2] = True
-                    try:
-                        if op.param3 not in wait["blacklist"]:
-                        	kc.kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        try:
-                            if op.param3 not in wait["blacklist"]:
-                                ki.kickoutFromGroup(op.param1,[op.param2])
-                        except:
-                            try:
-                                if op.param3 not in wait["blacklist"]:
-                                    kk.kickoutFromGroup(op.param1,[op.param2])
-                            except:
-                                try:
-                                    if op.param3 not in wait["blacklist"]:
-                                        cl.kickoutFromGroup(op.param1,[op.param2])
-                                except:
-                                    pass
-                return
-
         if op.type == 0:
             return
         if op.type == 5:
@@ -673,34 +622,7 @@ def bot(op):
                     if (wait["message"] in [" "," ","\n",None]):
                         pass
                     else:
-                        cl.sendText(op.param1, wait["message"])
-
-        if op.type == 19:
-            if op.param1 in protectkick:
-                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                    wait["blacklist"][op.param2] = True
-                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                else:
-                    pass
-
-        if op.type == 19:
-            try:
-                if op.param1 in ghost:
-                    if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        G = cl.getGroup(op.param1)
-                        G.preventedJoinByTicket = False
-                        cl.updateGroup(G)
-                        invsend = 0
-                        Ticket = cl.reissueGroupTicket(op.param1)
-                        sw.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        sw.kickoutFromGroup(op.param1,[op.param2])
-                        sw.leaveGroup(op.param1)
-                        X = cl.getGroup(op.param1)
-                        X.preventedJoinByTicket = True
-                        cl.updateGroup(X)
-            except:
-                pass             
-                
+                        cl.sendText(op.param1, wait["message"]:                
         if op.type == 19:
             try:
                 if op.param1 in protectantijs:
@@ -764,21 +686,30 @@ def bot(op):
                     except:
                         pass
                         
-                if op.param3 in Dmid:
+                if op.param1 in protectkick:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        ki.kickoutFromGroup(op.param1,[op.param2])
-                        ki.findAndAddContactsByMid(op.param3)
-                        ki.inviteIntoGroup(op.param1,[Dmid])
+                        js1.acceptGroupInvitation(op.param1)
+                        js1.kickoutFromGroup(op.param1,[op.param2])
+                        js1.findAndAddContactsByMid(op.param3)
+                        js1.inviteIntoGroup(op.param1,[op.param3])
+                        js1.leaveGroup(op.param1)
+                        cl.inviteIntoGroup(op.param1,[Dmid])
                     except:
                         try:
-                            kk.kickoutFromGroup(op.param1,[op.param2])
-                            kk.findAndAddContactsByMid(op.param3)
-                            kk.inviteIntoGroup(op.param1,[Dmid])
+                            js2.acceptGroupInvitation(op.param1)
+                            js2.kickoutFromGroup(op.param1,[op.param2])
+                            js2.findAndAddContactsByMid(op.param3)
+                            js2.inviteIntoGroup(op.param1,[op.param3])
+                            js2.leaveGroup(op.param1)
+                            cl.inviteIntoGroup(op.param1,[Emid])
                         except:
                             try:
-                                kc.kickoutFromGroup(op.param1,[op.param2])
-                                kc.findAndAddContactsByMid(op.param3)
-                                kc.inviteIntoGroup(op.param1,[Dmid])
+                                js3.acceptGroupInvitation(op.param1)
+                                js3.kickoutFromGroup(op.param1,[op.param2])
+                                js3.findAndAddContactsByMid(op.param3)
+                                js3.inviteIntoGroup(op.param1,[op.param3])
+                                js3.leaveGroup(op.param1)
+                                cl.inviteIntoGroup(op.param1,[Fmid])
                             except:
                                 pass
                
@@ -1261,36 +1192,7 @@ def bot(op):
                                             pass
                 return
 
-            if admin in op.param3:
-                if op.param2 in Bots:
-                    pass
-                if op.param2 in owner:
-                    pass
-                if op.param2 in admin:
-                    pass
-                if op.param2 in staff:
-                    pass
-                else:
-                    wait["blacklist"][op.param2] = True
-                    try:
-                        kc.kickoutFromGroup(op.param1,[op.param2])
-                        kc.findAndAddContactsByMid(op.param1,admin)
-                        kc.inviteIntoGroup(op.param1,admin)
-                    except:
-                        try:
-                            ki.kickoutFromGroup(op.param1,[op.param2])
-                            ki.findAndAddContactsByMid(op.param1,admin)
-                            ki.inviteIntoGroup(op.param1,admin)
-                        except:
-                            try:
-                                kk.kickoutFromGroup(op.param1,[op.param2])
-                                kk.findAndAddContactsByMid(op.param1,admin)
-                                kk.inviteIntoGroup(op.param1,admin)
-                            except:
-                                pass
-
-                return
-
+  
         if op.type == 55:
             try:
                 if op.param1 in Setmain["ARreadPoint"]:
