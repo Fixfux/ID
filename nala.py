@@ -339,14 +339,14 @@ def help():
                   "║●●●●●●●●●●●●●●●●●\n" + \
                   "║●➢" + key + "Menu Help\n" + \
                   "╠══════════════════\n" +\
-                  "╠➩●➢" + key + "Me\n" + \
-                  "╠➩●➢"+ key + "Mid「@」\n" + \
-                  "╠➩●➢" + key + "Info「@」\n" + \
-                  "╠➩●➢" + key + "Nk「@」\n" + \
-                  "╠➩●➢" + key + "Kick1「@」\n" + \
-                  "╠➩●➢" + key + "Mybot\n" + \
-                  "╠➩●➢" + key + "Status\n" + \
-                  "╠➩●➢" + key + "About\n" + \
+                  "╠➩●➢" + key + "joinbot\n" + \
+                  "╠➩●➢"+ key + "joinallbot\n" + \
+                  "╠➩●➢" + key + "byebot\n" + \
+                  "╠➩●➢" + key + "jcbye\n" + \
+                  "╠➩●➢" + key + "jsbye\n" + \
+                  "╠➩●➢" + key + "jsinvite\n" + \
+                  "╠➩●➢" + key + "invitebot\n" + \
+                  "╠➩●➢" + key + "jscancel\n" + \
                   "╠➩●➢" + key + "Restart\n" + \
                   "╠➩●➢" + key + "Runtime\n" + \
                   "╠➩●➢" + key + "Creator\n" + \
@@ -461,14 +461,8 @@ def helpbot():
                   "╠➩●➢" + key + "Set respon:「Text」\n" + \
                   "╠➩●➢" + key + "Set welcome:「Text」\n" + \
                   "╠➩●➢" + key + "Myname:「Nama」\n" + \
-                  "╠➩●➢" + key + "Bot1name:「Nama」\n" + \
-                  "╠➩●➢" + key + "Bot2name:「Nama」\n" + \
-                  "╠➩●➢" + key + "Bot3name:「Nama」\n" + \
-                  "╠➩●➢" + key + "Bot1up「Kirim fotonya」\n" + \
-                  "╠➩●➢" + key + "Bot2up「Kirim fotonya」\n" + \
-                  "╠➩●➢" + key + "Bot3up「Kirim fotonya」\n" + \
-                  "╠➩●➢" + key + "Gift:「Mid korban」「Jumlah」\n" +\
-                  "╠➩●➢" + key + "Spam:「Mid korban」「Jumlah」\n" + \
+                  "╠➩●➢" + key + "name1-9:「Nama」\n" + \
+                  "╠➩●➢" + key + "foto1-9「Kirim fotonya」\n" + \
                   "╠══════════════════════════\n" +\
                   "║●●●●" + key + "ID BOTS\n" +\
                   "║" + key + " ●● http://line.me/ti/p/~idbots_ku1 ●● \n" +\
@@ -2181,7 +2175,7 @@ def bot(op):
                                 except:
                                     pass
                                 
-                        elif cmd == "js on":
+                        elif cmd == "jsinvite":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
