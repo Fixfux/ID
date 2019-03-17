@@ -84,6 +84,7 @@ Hmid = jc2.getProfile().mid
 Imid = jc3.getProfile().mid
 KAC = [cl,ki,kk,kc]
 ABC = [ki,kk,kc]
+Botsku = [mid,Amid,Bmid,Cmid]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
 Jsku = [Dmid,Emid,Fmid]
 Dpk = admin + staff
@@ -626,7 +627,7 @@ def bot(op):
         if op.type == 19:
             try:
                 if op.param1 in protectantijs:
-                  if op.param3 in mid:
+                  if op.param3 in Botsku:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         js1.acceptGroupInvitation(op.param1)
                         G = js1.getGroup(op.param1)
@@ -642,7 +643,7 @@ def bot(op):
                         js1.updateGroup(G)
                         wait["blacklist"][op.param2] = True
                         random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                        sw.leaveGroup(op.param1)
+                        js1.leaveGroup(op.param1)
                         cl.inviteIntoGroup(op.param1,[Dmid])
                         cl.inviteIntoGroup(op.param1,[admin])
                     except:
@@ -681,8 +682,8 @@ def bot(op):
                                 wait["blacklist"][op.param2] = True
                                 random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                 js3.leaveGroup(op.param1)
-                                cl.inviteIntoGroup(op.param1,[Fmid])
-                                cl.inviteIntoGroup(op.param1,[admin])
+                                kk.inviteIntoGroup(op.param1,[Fmid])
+                                kk.inviteIntoGroup(op.param1,[admin])
                     except:
                         pass
                         
@@ -1548,54 +1549,7 @@ def bot(op):
                                 else: md+="「 Ghost「OFF」」\n"                                   
                                 cl.sendMessage(msg.to, md+"\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
-                        elif cmd == "creator" or text.lower() == 'creator':
-                            if msg._from in admin:
-                                cl.sendText(msg.to,"ID BOTS") 
-                                ma = ""
-                                for i in creator:
-                                    ma = cl.getContact(i)
-                                    cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
-
-                        elif cmd == "about" or cmd == "informasi":
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                               sendMention(msg.to, sender, "「 Type Selfbot 」\n")
-                               cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
-
-                        elif cmd == "me" or text.lower() == 'me':
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                               msg.contentType = 13
-                               msg.contentMetadata = {'mid': mid}
-                               cl.sendMessage1(msg)
-                               cl.sendMessage(msg.to,"「ID BOTS」")
-                               #cl.sendMessage(msg.to,"「 SAVE YOUR GROUP」")
-
-                        elif text.lower() == "mid":
-                               cl.sendMessage(msg.to, msg._from)
-
-                        elif ("Mid " in msg.text):
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                               key = eval(msg.contentMetadata["MENTION"])
-                               key1 = key["MENTIONEES"][0]["M"]
-                               mi = cl.getContact(key1)
-                               cl.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMID : " +key1)
-                               cl.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
-
-                        elif ("Info " in msg.text):
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                               key = eval(msg.contentMetadata["MENTION"])
-                               key1 = key["MENTIONEES"][0]["M"]
-                               mi = cl.getContact(key1)
-                               cl.sendMessage(msg.to, "❧Nama : "+str(mi.displayName)+"\n❧Mid : " +key1+"\n❧Status Msg"+str(mi.statusMessage))
-                               cl.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
-                               if "videoProfile='{" in str(cl.getContact(key1)):
-                                   cl.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
-                               else:
-                                   cl.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath))
-
+                        
                         elif cmd == "mybot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -1631,19 +1585,11 @@ def bot(op):
                                    kk.removeAllMessages(op.param2)
                                    kc.removeAllMessages(op.param2)
                                    sw.removeAllMessages(op.param2)
-                                   cl.sendText(msg.to,"Chat Para pelakor dibersihkan...")
+                                   cl.sendText(msg.to,"succes")
                                except:
                                    pass
 
-                        elif cmd.startswith("broadcast: "):
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                               sep = text.split(" ")
-                               pesan = text.replace(sep[0] + " ","")
-                               saya = cl.getGroupIdsJoined()
-                               for group in saya:
-                                   cl.sendMessage(group,"[ Broadcast ]\n" + str(pesan))
-
+                        
                         elif text.lower() == "mykey":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
